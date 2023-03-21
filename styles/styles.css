@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+section {
+    width: 90%;
+    max-width: 400px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+button{
+    margin-block: 1rem;
+    padding: 10px 20px;
+    background-color: blueviolet;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(121, 57, 181);
+}
+button:active{
+    background-color: rgb(77, 55, 98);
+}
+
+.card-joke {
+    background-color: #fcfcfc;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: left;
+}
+#category {
+    display: inline-block;
+    background-color: #e7e7e7;
+    color: blueviolet;
+    padding: 5px 15px;
+}
+#setup {
+    font-weight: bold;
+    margin-block: 1rem;
+}

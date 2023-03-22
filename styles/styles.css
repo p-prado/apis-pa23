@@ -2,11 +2,29 @@
     margin: 0;
     padding: 0;
 }
-section {
+
+body {
+    padding-block: 3rem;
+}
+
+h3 {
+    margin-block: 1rem;
+}
+
+.container {
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     margin-inline: auto;
     text-align: center;
+}
+
+fieldset{
+    border: none;
+}
+
+.categories {
+    padding: 1rem 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 button{
@@ -26,12 +44,13 @@ button:active{
 }
 
 .card-joke {
+    display: none;
     background-color: #fcfcfc;
     box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.25);
     padding: 20px;
     text-align: left;
 }
-#category {
+#category-text {
     display: inline-block;
     background-color: #e7e7e7;
     color: blueviolet;
@@ -40,4 +59,14 @@ button:active{
 #setup {
     font-weight: bold;
     margin-block: 1rem;
+}
+
+.joke {
+    padding-block: 3rem;
+
+}
+
+.info {
+    padding-block: 3rem;
+    background-color: #e7e7e7;
 }

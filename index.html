@@ -11,54 +11,60 @@
 </head>
 
 <body>
-    <section>
-        <h1 id="heading">Random Joke Generator</h1>
-
-        <h3>Select the Joke Category:</h3>
-        <fieldset>
-            <input class="category" type="radio" value="Any" name="category" id="radio-any" checked>
-            <label for="radio-any">Any</label>
-            <input class="category" type="radio" value="custom" name="category" id="radio-custom">
-            <label for="radio-custom">Custom</label>
-        </fieldset>
-        <input class="category-checkbox" type="checkbox" value="pun" name="pun" id="checkbox-pun" disabled>
-        <label for="pun">Pun</label>
-        <input class="category-checkbox" type="checkbox" value="dark" name="dark" id="checkbox-dark" disabled>
-        <label for="dark">Dark</label>
-        <input class="category-checkbox" type="checkbox" value="programming" name="programming" id="checkbox-programming" disabled>
-        <label for="programming">Programming</label>
-        <input class="category-checkbox" type="checkbox" value="spooky" name="spooky" id="checkbox-spooky" disabled>
-        <label for="spooky">Spooky</label>
-        <input class="category-checkbox" type="checkbox" value="christmas" name="christmas" id="checkbox-christmas" disabled>
-        <label for="christmas">Christmas</label>
-        <input class="category-checkbox" type="checkbox" value="misc" name="misc" id="checkbox-misc" disabled>
-        <label for="misc">Misc</label>
-
-        <!-- <h3>Select Flags to Blacklist</h3>
-        <input type="checkbox" name="nsfw" id="flag-nsfw">
-        <label for="nsfw">Nsfw</label>
-        <input type="checkbox" name="religious" id="flag-religious">
-        <label for="religious">Religious</label>
-        <input type="checkbox" name="political" id="flag-political">
-        <label for="political">Political</label>
-        <input type="checkbox" name="racist" id="flag-racist">
-        <label for="racist">Racist</label>
-        <input type="checkbox" name="sexist" id="flag-sexist">
-        <label for="sexist">Sexist</label>
-        <input type="checkbox" name="explicit" id="flag-explicit">
-        <label for="explicit">Explicit</label> -->
-
-        <h3>Select your preferred joke type:</h3>
-        <input type="checkbox" name="single" id="type-single">
-        <label for="single">Single</label>
-        <input type="checkbox" name="twopart" id="type-twopart">
-        <label for="twopart">Two Part</label><br>
-
-        <button id="requestButton">Get a Joke</button>
-        <div class="card-joke">
-            <p id="category">Category</p>
-            <p id="setup">Setup Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque earum commodi fugiat doloribus sunt?</p>
-            <p id="delivery">Corporis dignissimos architecto iure! Incidunt autem ipsum, distinctio suscipit ea accusamus.</p>
+    <section class="joke">
+        <div class="container">
+            <h1 id="heading">Random Joke Generator</h1>
+            <h3>Select the Joke Category:</h3>
+            <div class="categories">
+                <fieldset>
+                    <input class="category" type="radio" value="Any" name="category" id="radio-any" checked>
+                    <label for="radio-any">Any</label>
+                    <input class="category" type="radio" value="custom" name="category" id="radio-custom">
+                    <label for="radio-custom">Custom</label>
+                </fieldset>
+                <input class="category-checkbox" type="checkbox" value="pun" name="pun" id="checkbox-pun" disabled>
+                <label for="pun">Pun</label>
+                <input class="category-checkbox" type="checkbox" value="dark" name="dark" id="checkbox-dark" disabled>
+                <label for="dark">Dark</label>
+                <input class="category-checkbox" type="checkbox" value="programming" name="programming" id="checkbox-programming" disabled>
+                <label for="programming">Programming</label>
+                <input class="category-checkbox" type="checkbox" value="spooky" name="spooky" id="checkbox-spooky" disabled>
+                <label for="spooky">Spooky</label>
+                <input class="category-checkbox" type="checkbox" value="christmas" name="christmas" id="checkbox-christmas" disabled>
+                <label for="christmas">Christmas</label>
+                <input class="category-checkbox" type="checkbox" value="misc" name="misc" id="checkbox-misc" disabled>
+                <label for="misc">Misc</label>
+            </div>
+            <!-- <h3>Select Flags to Blacklist</h3>
+            <input type="checkbox" name="nsfw" id="flag-nsfw">
+            <label for="nsfw">Nsfw</label>
+            <input type="checkbox" name="religious" id="flag-religious">
+            <label for="religious">Religious</label>
+            <input type="checkbox" name="political" id="flag-political">
+            <label for="political">Political</label>
+            <input type="checkbox" name="racist" id="flag-racist">
+            <label for="racist">Racist</label>
+            <input type="checkbox" name="sexist" id="flag-sexist">
+            <label for="sexist">Sexist</label>
+            <input type="checkbox" name="explicit" id="flag-explicit">
+            <label for="explicit">Explicit</label> -->
+            <h3>Select your preferred joke type:</h3>
+            <input type="checkbox" name="single" id="type-single">
+            <label for="single">Single</label>
+            <input type="checkbox" name="twopart" id="type-twopart">
+            <label for="twopart">Two Part</label><br>
+            <button id="requestButton">Get a Joke</button>
+            <div id="card-joke" class="card-joke">
+                <p id="category-text"></p>
+                <p id="setup"></p>
+                <p id="delivery"></p>
+            </div>
+        </div>
+    </section>
+    <section class="info">
+        <div class="container">
+            <h3>How it Works</h3>
+            <p>This random joke generator uses the <a href="https://v2.jokeapi.dev/">JokeAPI</a>. When you hit the "Get a Joke" button, it generates a call to the API with the selected parameters, to show a joke matching your criteria.</p>
         </div>
     </section>
 </body>

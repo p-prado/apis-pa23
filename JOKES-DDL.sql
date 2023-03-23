@@ -7,6 +7,9 @@ CREATE TABLE IF NOT EXISTS `jokes`.`jokes` (
   `idjoke` INT NOT NULL AUTO_INCREMENT,
   `language` VARCHAR(2) NOT NULL,
   `type` VARCHAR(7) NOT NULL,
+  `joke` VARCHAR(2000),
+  `setup` VARCHAR(2000),
+  `delivery` VARCHAR(2000),
   `category` VARCHAR(12) NOT NULL,
   PRIMARY KEY (`idjoke`)
   );
@@ -42,4 +45,11 @@ CREATE TABLE IF NOT EXISTS `jokes`.`jokes_has_flags` (
 
 INSERT INTO flags VALUES ("nsfw"), ("religious"), ("political"), ("racist"), ("sexist"), ("explicit");
 
-INSERT INTO jokes (idjoke, language, type, category) VALUES (
+INSERT INTO jokes (idjoke, language, type, category, setup, delivery) VALUES (
+	217,
+	"en",
+	"twopart",
+	"Misc",
+	"How do construction workers party",
+	"They raise the roof."
+);

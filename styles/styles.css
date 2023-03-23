@@ -43,6 +43,12 @@ button:active{
     background-color: rgb(77, 55, 98);
 }
 
+button:disabled{
+    background-color: gray;
+    color: lightgray;
+    cursor: default;
+}
+
 .card-joke {
     display: none;
     background-color: #fcfcfc;

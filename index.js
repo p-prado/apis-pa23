@@ -107,9 +107,7 @@ requestFromDB.addEventListener('click', function () {
             catParam = "Any";
         } else {
             let catArray = catParam.split(',');
-            if (catArray.length > 1) {
-                var catParamFinal = `"${catArray.join(`","`)}"`;
-            }
+            var catParamFinal = `("${catArray.join('", "')}")`;
             catParam = catParamFinal;
         }
     }
@@ -180,7 +178,7 @@ ipcRenderer.on('insertSuccess', (event, arg) => {
     alert("The joke has been successfully saved to the database!");
 });
 
-ipcRenderer.on('insertFail', (event)=>{
+ipcRenderer.on('insertFail', (event) => {
     alert("We were unable to save the joke.");
 })
 
@@ -191,22 +189,22 @@ ipcRenderer.on('selectSuccess', (event, result) => {
     updateJoke(result);
 });
 
-ipcRenderer.on('selectFail', (event)=>{
+ipcRenderer.on('selectFail', (event) => {
     alert("No matching joke found! Try another search, or try adding new jokes from the API!");
 });
 
 // Function to Update the joke's HTML with the provided joke in JSON format.
 function updateJoke(jokeJson) {
     categoryText.innerHTML = jokeJson.category;
-            if (jokeJson.type == "twopart") {
-                setup.innerHTML = jokeJson.setup;
-                delivery.innerHTML = jokeJson.delivery;
-            } else if (jokeJson.type == "single") {
-                setup.innerHTML = "";
-                delivery.innerHTML = jokeJson.joke;
-            }
-            // If the Jokes Result section is not visible, make it visible;
-            if (cardJoke.style.display = "none") {
-                cardJoke.style.display = "block";
-            }
+    if (jokeJson.type == "twopart") {
+        setup.innerHTML = jokeJson.setup;
+        delivery.innerHTML = jokeJson.delivery;
+    } else if (jokeJson.type == "single") {
+        setup.innerHTML = "";
+        delivery.innerHTML = jokeJson.joke;
+    }
+    // If the Jokes Result section is not visible, make it visible;
+    if (cardJoke.style.display = "none") {
+        cardJoke.style.display = "block";
+    }
 }

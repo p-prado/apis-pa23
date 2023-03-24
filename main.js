@@ -100,10 +100,10 @@ ipcMain.on('mySQLSelect', (event, catParam, typeParam) => {
   } else {
     if (typeParam==="") {
       connection.query(
-        'SELECT * FROM jokes WHERE category IN (?) ORDER BY RAND() LIMIT 1;',
-        catParam,
+        `SELECT * FROM jokes WHERE category IN ${catParam} ORDER BY RAND() LIMIT 1;`,
         function(err, results){
           if (err) {
+            // console.log(err);
             console.log(err);
             event.sender.send('selectFail');
           } else {
@@ -113,8 +113,7 @@ ipcMain.on('mySQLSelect', (event, catParam, typeParam) => {
       )
     } else {
       connection.query(
-        'SELECT * FROM jokes WHERE category IN (?) AND type = ? ORDER BY RAND() LIMIT 1;',
-        [catParam, typeParam],
+        `SELECT * FROM jokes WHERE category IN ${catParam} AND type = "${typeParam}" ORDER BY RAND() LIMIT 1;`,
         function (err, results) {
           if (err) {
             console.log(err);

@@ -4,27 +4,43 @@
 }
 
 body {
-    padding-block: 3rem;
+    font-family: 'Segoe UI', Geneva, sans-serif;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
 }
 
 h3 {
     margin-block: 1rem;
+    font-weight: 700;
 }
 
 .container {
     width: 90%;
-    max-width: 500px;
+    max-width: 700px;
     margin-inline: auto;
     text-align: center;
+}
+
+.form-wrapper {
+    background-color: #e7e7e7;
+    padding: 1rem;
+    margin-block: 2rem;
 }
 
 fieldset{
     border: none;
 }
 
+input[type=checkbox]:disabled + label {
+    color: darkgray;
+}
+
+
 .categories {
     padding: 1rem 1rem;
-    background-color: rgba(0, 0, 0, 0.05);
 }
 
 button{
@@ -73,6 +89,6 @@ button:disabled{
 }
 
 .info {
-    padding-block: 3rem;
+    padding-block: 2rem;
     background-color: #e7e7e7;
 }
